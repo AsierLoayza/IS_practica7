@@ -2,86 +2,12 @@ package unavarra.is.practica7.ejercicios;
 
 public class Ejercicio6 {
     
-        public static char DNI(int dni){
-        char resul = 'T';
-        Integer r = dni%23;
-        switch(r){
-            case 0:
-                resul = 'T';
-                break;
-            case 1:
-                resul = 'R';
-                break;
-            case 2:
-                resul = 'W';
-                break;
-            case 3:
-                resul = 'A';
-                break;
-            case 4:
-                resul = 'G';
-                break;
-            case 5:
-                resul = 'M';
-                break;
-            case 6:
-                resul = 'Y';
-                break;
-            case 7:
-                resul = 'F';
-                break;
-            case 8:
-                resul = 'P';
-                break;
-            case 9:
-                resul = 'D';
-                break;
-            case 10:
-                resul = 'X';
-                break;
-            case 11:
-                resul = 'B';
-                break;
-            case 12:
-                resul = 'N';
-                break;
-            case 13:
-                resul = 'J';
-                break;
-            case 14:
-                resul = 'Z';
-                break;
-            case 15:
-                resul = 'S';
-                break;
-            case 16:
-                resul = 'Q';
-                break;
-            case 17:
-                resul = 'V';
-                break;
-            case 18:
-                resul = 'H';
-                break;
-            case 19:
-                resul = 'L';
-                break;
-            case 20:
-                resul = 'C';
-                break;          
-            case 21:
-                resul = 'K';
-                break;          
-            case 22:
-                resul = 'E';
-                break;
+        public static char calcularLetraDni(int numDni){
+            Dni dni = new Dni(numDni);
+            return dni.validarLetra();
         }
-        return resul;
-    }
-
 
     public static void main(String[] args) {
-        System.out.println(DNI(72700123)); 
+        System.out.println(calcularLetraDni(72700123)); 
     }
-    
 }

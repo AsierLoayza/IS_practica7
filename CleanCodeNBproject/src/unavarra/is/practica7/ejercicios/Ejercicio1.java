@@ -1,23 +1,15 @@
 package unavarra.is.practica7.ejercicios;
 
 public class Ejercicio1 {
-    
-    public static Boolean linea(String s){
-        if(s.startsWith("A")){
-            if(s.endsWith("S")) {
-                return true;
-            }
-            return false;
-        }
-        else{
-            return false;
-        }
+    private static Boolean comienzaPorAyAcabaPorS(String linea){
+        return linea.startsWith("A") && linea.endsWith("S");
+        
     }
 
     public static void main(String[] args) {
         // Ejercicio 1
-        System.out.println(linea("HOLA"));
-        System.out.println(linea("ADIOS"));
+        System.out.println(comienzaPorAyAcabaPorS("HOLA"));
+        System.out.println(comienzaPorAyAcabaPorS("ADIOS"));
     }
     
 }

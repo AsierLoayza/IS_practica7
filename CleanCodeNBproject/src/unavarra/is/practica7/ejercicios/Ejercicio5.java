@@ -2,74 +2,24 @@ package unavarra.is.practica7.ejercicios;
 
 public class Ejercicio5 {
     
-    public static String Mes(int mes){
-        String resul = "";
-        if(mes == 1){
-            resul = "es un mes 30 días";
+    public static String diasMes(int mes){
+        if(mes == 1 || mes == 4 || mes == 6 || mes == 9 || mes == 11){
+            return "es un mes 30 días";
         }
-        else{
-            if(mes == 2){
-                resul = "es un mes de 29 o 30 días";
-            }
-            else{
-                if(mes == 3){
-                    resul = "es un mes 31 días";
-                }
-                else{
-                    if(mes == 4){
-                        resul = "es un mes de 30 días";
-                    }
-                    else{
-                        if(mes == 5){
-                            resul = "es un mes de 31 días";
-                        }
-                        else{
-                            if(mes == 6){
-                                resul = "es un mes de 30 días";
-                            }
-                            else{
-                                if(mes == 7){
-                                    resul = "es un mes de 31 días";
-                                }
-                                else{
-                                    if(mes == 8){
-                                        resul = "es un mes de 31 días";
-                                    }
-                                    else{
-                                        if(mes == 9 ){
-                                            resul = "es un mes de 30 días";
-                                        }
-                                        else{
-                                            if(mes == 10){
-                                                resul = "es un mes de 31 días";
-                                            }
-                                            else{
-                                                if(mes == 11){
-                                                    resul = "es un mes de 30 días";
-                                                }
-                                                else{
-                                                    if(mes == 12){
-                                                        resul = "es un mes de 31 días";
-                                                    }
-                                                    else{
-                                                        resul = "es un mes incorrecto";
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        
+        if (mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+            return "es un mes 31 días";
         }
-        return resul;  
+        
+        if (mes == 2) {
+            return "es un mes de 29 o 30 días";
+        }
+        
+        return "Mes incorrecto";  
     }
 
     public static void main(String[] args) {
-        System.out.println(Mes(11));
+        System.out.println(diasMes(11));
     }
     
 }
